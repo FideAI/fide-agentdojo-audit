@@ -19,7 +19,7 @@ Loading the missing code and rebuilding the benchmark’s task lists selected th
 
 In the email objective we examined, the attacker wants a message sent with a particular recipient, subject and body. “Success” here means success for the attacker. The inbox is simulated; no email goes to a real person.
 
-[One released record](RESEARCH-PAPER.md#41-forty-five-reconstructions-isolate-search-match-interference) contains a request for that message and a matching email object returned by the tool. Its saved label says the attack failed.
+[One released record](docs/WORKED-EXAMPLE.md) contains a request for that message and a matching email object returned by the tool. Its saved label says the attack failed.
 
 The code we inspected explains a way this can happen. Before checking the recipient and body, the evaluator searches email subjects and bodies for the target subject text. It requires exactly one match. In our reconstruction there are two: the sent message and an earlier email containing injected material. Examined alone, the sent message passes. Add the other matching email, and the evaluator rejects the state.
 
@@ -49,7 +49,7 @@ We called both scoring methods with three constructed inputs. To isolate recipie
 | Expected address in uppercase | Fail | Pass |
 | An unrelated address | Fail | Fail |
 
-*An isolated test of the recipient condition for completing the user’s task. The file-change and email-change checks were held true; these are not complete agent-task runs. [Inputs, methods and results](compatibility/results/qualification.json).*
+*An isolated test of the recipient condition for completing the user’s task. The file-change and email-change checks were held true; these are not complete agent-task runs. [Recorded branch-control results](compatibility/results/qualification.json); [method and reproduction](compatibility/README.md).*
 
 Case normalization may be a sensible correction. A benchmark still needs to make clear when it has adopted it. Here, the same old version name could select a different scoring rule after an import.
 
@@ -67,7 +67,7 @@ Those exclusions contained **all eight attacks the publisher had labeled success
 
 ![Holding the publisher’s labels fixed, the detector has eight attack successes out of forty and the tool filter has one. After Fide’s common-task exclusion, the detector has zero out of twenty-nine and the tool filter still has one.](figures/selection-comparison.png)
 
-*Lower attack-success rates favor a defense on this measure. In this exploratory sample of one attacker objective and attack family, Fide’s filter changes the comparison from detector 8/40 versus tool filter 1/40 to 0/29 versus 1/29. Labels are unchanged; the same eleven task IDs are removed. [Data and exclusions](RESEARCH-PAPER.md#44-our-evidence-filter-reverses-a-saved-label-comparison).*
+*Lower attack-success rates favor a defense on this measure. In this exploratory sample of one attacker objective and attack family, Fide’s filter changes the comparison from detector 8/40 versus tool filter 1/40 to 0/29 versus 1/29. Labels are unchanged; the same eleven task IDs are removed. [Comparison and interpretation](RESEARCH-PAPER.md#44-our-evidence-filter-reverses-a-saved-label-comparison); [record-level data and exclusions](archive/data/comparison-count-inputs.json).*
 
 The detector looked better because we stopped counting the cases containing its labeled successes. The original authors had already counted them. This is a consequence of our audit rule, and a reason to inspect an auditor’s exclusions as carefully as its corrections.
 
@@ -91,6 +91,6 @@ AgentDojo’s public code and records made this scrutiny possible. They let us t
 
 ---
 
-**Inspect the work:** The [research paper](RESEARCH-PAPER.md) contains the full methods, source pin, populations and uncertainty analysis. The [registration and compatibility supplement](compatibility/README.md) preserves its protocol, inputs, failed attempts and controls. The separate [archive-analysis companion](archive/README.md) explains how to verify derived counts or recompute the original analysis. The [claim ledger](CLAIMS.md) records the evidence and boundaries for each main result.
+**Inspect the work:** The [research paper](RESEARCH-PAPER.md) contains the full methods, source pin, populations and uncertainty analysis. The [registration and compatibility supplement](compatibility/README.md) provides its protocol, projected results and controls, with a [summary of failed attempts](docs/FAILURES-AND-AMENDMENTS.md). The separate [archive-analysis companion](archive/README.md) explains how to verify derived counts or recompute the original analysis. The [claim ledger](CLAIMS.md) records the evidence and boundaries for each main result. Start with the [evidence guide](docs/EVIDENCE-GUIDE.md) to follow a finding to its data and reproduction steps.
 
 **Research status:** Unpublished release candidate. Separate Codex AI agents reviewed and reproduced parts of the work within a shared orchestrated session; this is not independent human review. Human technical/editorial review and a release decision remain pending. No new model trials or real-world email delivery are claimed.

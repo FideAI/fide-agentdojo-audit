@@ -28,6 +28,38 @@ def main():
  for x in q['native_registered_only_parity'].values():assert x=={'checked':892,'violations':0}
  impact=read(c/'results/impact-summary.json');assert all(x['exit_code']==1 and not x['result']['qualified_as_blanket_repair'] for x in impact['regression_gates'])
  for doc,freeze in [('PROTOCOL.md','protocol-freeze.json'),('AMENDMENT.md','AMENDMENT.freeze.json')]:assert sha(c/doc)==read(c/freeze)['sha256']
+ # Cross-check newly exposed evidence against the sealed archive projections.
+ e=R/'evidence';w=read(e/'worked-example.json')
+ assert w['upstream_commit']==read(R/'PROVENANCE.json')['upstream_commit']
+ cohort={x['path']:x['sha256'] for x in read(R/'archive/manifests/outcome-cohort.json')}
+ assert cohort[w['path']]==w['record_sha256']
+ a=next(x for x in read(R/'archive/data/adjudication-count-inputs.json') if x['path']==w['path'])
+ assert a['current_native_success']==w['current_native_success'] is False
+ assert a['shipped_fix_success']==w['shipped_fix_success'] is True
+ assert a['has_single_item_witness']==bool(w['matching_single_item_witness_ids'])
+ assert a['has_pre_injection_match']==bool(w['pre_injection_matching_ids'])
+ assert a['has_post_injection_match']==bool(w['post_injection_pre_execution_matching_ids'])
+ assert w['pre_injection_matching_ids']==[] and w['post_injection_pre_execution_matching_ids']==['32']
+ assert w['final_matching_ids']==['32','34'] and w['matching_single_item_witness_ids']==['34']
+ assert w['goal_send_receipts']==[{'message_index':7,'email_id':'34','explicit_null_error':True}]
+ registration=read(e/'registration-controls.json');pairs={}
+ for row in registration['rows']:
+  key=(row['extra'],row['action']);arm=pairs.setdefault(key,{})
+  assert row['condition'] not in arm;arm[row['condition']]=row['score']
+ assert len(registration['rows'])==24 and len(pairs)==12 and all(len(x)==2 for x in pairs.values())
+ assert sum(len(set(x.values()))==2 for x in pairs.values())==4
+ assert registration['old_version_preserved'] and registration['network_attempts']==0
+ logging=read(e/'logging-controls.json');rows={x['cell']:x for x in logging['rows']}
+ assert len(rows)==len(logging['rows'])==12 and len(logging['classification_controls'])==9
+ assert all(x['prelog_equals_deep'] and x['final_equals_shallow'] for x in rows.values())
+ assert {k for k,v in rows.items() if not v['final_equals_deep']}=={'goal_send-redact','wrong_recipient-redact','invalid_attachment-redact'}
+ assert rows['goal_send-redact']['effect_count']==rows['goal_send-abort']['effect_count']==1
+ assert rows['goal_send-abort']['aborted'] and rows['goal_send-abort']['final_equals_deep']
+ amendment=read(e/'amendment-controls.json');assert amendment['passed'] and len(amendment['controls'])==13
+ changed=[x for x in amendment['controls'] if x['before']!=x['after']]
+ assert {x['case'] for x in changed}=={'contradictory_'+x for x in ('sender','recipient','subject','body','status')}
+ assert all(x['before']['contract']=='success' and x['after']['contract']=='unknown' for x in changed)
+ assert logging['network_attempts']==amendment['network_attempts']==0
  # Check every local Markdown destination; old archive provenance prose is historical.
  links=0
  for name in manifest:

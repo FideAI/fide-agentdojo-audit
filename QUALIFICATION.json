@@ -138,5 +138,16 @@
       "scope": "Portable adapted-script computational rerun; not independent human review or new model outcomes."
     },
     "git_worktree_unchanged": true
+  },
+  "navigation_evidence": {
+    "projected_files": 4,
+    "matched_existing_full_runs": [
+      "original",
+      "amended"
+    ],
+    "worked_record_matches_sealed_source_hash": true,
+    "worked_match_sets_agree_with_separate_ai_review": true,
+    "sealed_archive_unchanged": true,
+    "scope": "Packaging and evidence-navigation validation; no new model or scientific experiment, not human review."
   }
 }

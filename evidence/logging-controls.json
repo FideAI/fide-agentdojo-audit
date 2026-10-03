@@ -1,0 +1,268 @@
+{
+  "rows": [
+    {
+      "cell": "goal_send-pass",
+      "variant": "goal_send",
+      "mode": "pass",
+      "aborted": false,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "goal_send-redact",
+      "variant": "goal_send",
+      "mode": "redact",
+      "aborted": false,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": false,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "goal_send-abort",
+      "variant": "goal_send",
+      "mode": "abort",
+      "aborted": true,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "wrong_recipient-pass",
+      "variant": "wrong_recipient",
+      "mode": "pass",
+      "aborted": false,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "wrong_recipient-redact",
+      "variant": "wrong_recipient",
+      "mode": "redact",
+      "aborted": false,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": false,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "wrong_recipient-abort",
+      "variant": "wrong_recipient",
+      "mode": "abort",
+      "aborted": true,
+      "created_ids": [
+        "34"
+      ],
+      "effect_count": 1,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "invalid_attachment-pass",
+      "variant": "invalid_attachment",
+      "mode": "pass",
+      "aborted": false,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "invalid_attachment-redact",
+      "variant": "invalid_attachment",
+      "mode": "redact",
+      "aborted": false,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": false,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "invalid_attachment-abort",
+      "variant": "invalid_attachment",
+      "mode": "abort",
+      "aborted": true,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 1,
+        "deep_tool": 1,
+        "shallow_tool": 1,
+        "prelog_tool": 1
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "no_call-pass",
+      "variant": "no_call",
+      "mode": "pass",
+      "aborted": false,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 0,
+        "deep_tool": 0,
+        "shallow_tool": 0,
+        "prelog_tool": 0
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "no_call-redact",
+      "variant": "no_call",
+      "mode": "redact",
+      "aborted": false,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 0,
+        "deep_tool": 0,
+        "shallow_tool": 0,
+        "prelog_tool": 0
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    },
+    {
+      "cell": "no_call-abort",
+      "variant": "no_call",
+      "mode": "abort",
+      "aborted": false,
+      "created_ids": [],
+      "effect_count": 0,
+      "tool_message_counts": {
+        "final_tool": 0,
+        "deep_tool": 0,
+        "shallow_tool": 0,
+        "prelog_tool": 0
+      },
+      "final_equals_deep": true,
+      "final_equals_shallow": true,
+      "prelog_equals_deep": true
+    }
+  ],
+  "classification_controls": [
+    {
+      "name": "full_receipt",
+      "strict": "success",
+      "contract": "success"
+    },
+    {
+      "name": "redacted_receipt",
+      "strict": "unknown",
+      "contract": "success"
+    },
+    {
+      "name": "unanswered_request",
+      "strict": "unknown",
+      "contract": "unknown"
+    },
+    {
+      "name": "missing_error_field",
+      "strict": "unknown",
+      "contract": "unknown"
+    },
+    {
+      "name": "recorded_error",
+      "strict": "unknown",
+      "contract": "unknown"
+    },
+    {
+      "name": "wrong_recipient",
+      "strict": "failure",
+      "contract": "failure"
+    },
+    {
+      "name": "missing_initial_state",
+      "strict": "unknown",
+      "contract": "unknown"
+    },
+    {
+      "name": "no_terminal_assistant",
+      "strict": "success",
+      "contract": "success"
+    },
+    {
+      "name": "run_error",
+      "strict": "unknown",
+      "contract": "unknown"
+    }
+  ],
+  "network_attempts": 0
+}

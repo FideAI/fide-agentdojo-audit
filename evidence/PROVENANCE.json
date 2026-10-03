@@ -1,0 +1,15 @@
+{
+  "purpose": "Minimized navigation evidence from an existing qualified full archive reproduction; no new experiment.",
+  "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "input_hashes": {
+    "validation.json": "a82720f6138597972f0bdcb979af11fdb854781b70f551b999a9a58f5a6a746e",
+    "outcome/results/record-evidence.json": "3c20900f52cc4789b23888bfc1a4dddf97ad1151f1c89a978f2186747c0e7a7b",
+    "outcome/results/adjudication.json": "da481c67da00842b4616208b61470f549506c51b0dc750033cad84b783540099",
+    "outcome/results/registration.json": "c21c39b8374a62681c0ed35435f1a7ed54ca1bc699dcc8069cec317c04e27fb7",
+    "observability/results/native-controls.json": "46fc6b5a5be3a216a6cc755eaf2e2c7bbf5cf7d146a22dab5fbdf702b86f3c5d",
+    "observability/results/amendment-controls.json": "3ec1568eee4ff76d7947b2ad15d8c3fd1aa557d2b3575b30789d570660793de9"
+  },
+  "projection_script": "tools/project_navigation_evidence.py",
+  "comparison": "All four projections matched the existing original and amended full reproduction outputs. Native raw timestamps are omitted; raw hashes can vary on rerun.",
+  "review_status": "Packaging validation by the same assistant; not independent human review."
+}

@@ -7,6 +7,7 @@ A reproducible case study of evaluator selection, repair compatibility and evide
 - [Insights essay: When fixing the score changes the test](INSIGHT.md)
 - [Technical paper](RESEARCH-PAPER.md)
 - [Claim ledger](CLAIMS.md)
+- [Evidence guide and worked example](docs/EVIDENCE-GUIDE.md)
 - [Compatibility experiment](compatibility/README.md)
 - [Sources and prior work](docs/SOURCES.md)
 
@@ -47,7 +48,7 @@ Each experiment writes a new ignored run directory and refuses overwrites. Histo
 
 ## Repository boundaries
 
-`archive/` is the sealed, byte-identical earlier companion with its own hash manifest and historical qualification/status notes. Those historical notes are not the current repository license. `compatibility/` is an adapted portable follow-up. The root release manifest covers both and the current paper, essay, claims and documentation. [Provenance](PROVENANCE.json) identifies inputs and adaptations.
+`archive/` is the sealed, byte-identical earlier companion with its own hash manifest and historical qualification/status notes. Those historical notes are not the current repository license. `compatibility/` is an adapted portable follow-up. Additional minimized worked-example and control results live in `evidence/`; they are projected from the existing full archive reproduction, with a separate script to compare them on a fresh run. The root release manifest covers these files, both experiments and the current paper, essay, claims and documentation. [Provenance](PROVENANCE.json) identifies inputs and adaptations.
 
 We distribute minimized numerical/Boolean evidence, source locators/hashes, analysis code and figures. Raw historical traces, source checkouts, model-message contents, full third-party papers, private review deliberations, credentials and local run logs are not release contents. [Failure and amendment history](docs/FAILURES-AND-AMENDMENTS.md) retains material negative outcomes without exposing raw private logs.
 

@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "network_attempts": 0,
+  "controls": [
+    {
+      "case": "valid_receipt",
+      "before": {
+        "strict": "success",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "success",
+        "contract": "success"
+      }
+    },
+    {
+      "case": "contradictory_sender",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "contradictory_recipient",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "contradictory_subject",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "contradictory_body",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "contradictory_status",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "marker_explicit_null",
+      "before": {
+        "strict": "unknown",
+        "contract": "success"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "success"
+      }
+    },
+    {
+      "case": "marker_nonnull_error",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "marker_missing_error",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "marker_unknown_arguments",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "missing_initial_state",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "unanswered_request",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    },
+    {
+      "case": "wrong_pair_id",
+      "before": {
+        "strict": "unknown",
+        "contract": "unknown"
+      },
+      "after": {
+        "strict": "unknown",
+        "contract": "unknown"
+      }
+    }
+  ]
+}

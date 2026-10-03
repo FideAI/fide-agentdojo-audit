@@ -13,5 +13,6 @@
     "summarize.py": "4f13af499be8278ee8aeb51149eb99b18e1ce28c374f8e933e7a1f0a4beac87e",
     "regression_gate.py": "603ab95a7c9b28afdccdb6bce6ffacfd291dcaed417e271ec5053b298d59cea3"
   },
-  "adaptation": "Archive allowlist unchanged. Compatibility path injection and fresh-run orchestration; result prose hashed, paths/stack traces omitted. Paper links rebased to minimized release evidence with an explicit release map. No new scientific claim."
+  "adaptation": "Archive allowlist unchanged. Compatibility path injection and fresh-run orchestration; result prose hashed, paths/stack traces omitted. Paper links rebased to minimized release evidence with an explicit release map. No new scientific claim.",
+  "navigation_evidence": "evidence/PROVENANCE.json records input hashes for four additional minimized projections of the existing qualified archive results; the sealed archive is unchanged."
 }
