@@ -9,3 +9,5 @@ The combined standalone repository was checked on October 2, 2026 (America/Los_A
 - Offline verification checks explicit release hashes, archive sealing, derived compatibility relations, local link destinations and sensitive-string patterns.
 
 The dependency lock specifies versions, not wheel hashes. Same-host caches were used. Cross-platform execution, historical runtime identity, independent human review and broad semantic repair correctness are not qualified. Checks do not approve publication.
+
+A clean local Git clone with another new Python environment also reproduced the full original archive analysis and all compatibility results, leaving the checkout unchanged. It used the documented `--source` option to reuse the already acquired public source checkout. Exact tested commit and results are recorded in QUALIFICATION.json. Subsequent qualification-documentation and link-validator updates do not alter the scientific executables.

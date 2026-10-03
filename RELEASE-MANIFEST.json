@@ -11,8 +11,8 @@
     "LICENSE": "9474292d5d2b197810240e7f3f5148f83b506bb08542b58dc83e1c5834895390",
     "LICENSES/AgentDojo-MIT.txt": "4285a071f2d382338e52b4fb0a186d952984a34d43a33d8872e1a1d8cb43401e",
     "PROVENANCE.json": "bd3274965302cd363941dacff5c5747a2463edc2234d92423e46af4526be3c10",
-    "QUALIFICATION.json": "85b42959389cb392b939bfdf8b004060e1eceea854858b8ecb7a9d1157b88086",
-    "QUALIFICATION.md": "7248b98775075e924a84503ea8f32ba3acc3bae96ab652c0ab2e3ff2b3daa87b",
+    "QUALIFICATION.json": "b65a2029cc67c42c527535859a1201d34b18a0e54c4ddd25dd51ab7fcc7d1b6a",
+    "QUALIFICATION.md": "bd8feccdd6fd5849dcbccbfadfaa761ad4f55fbe078bcc40cab4bbb5074ec8de",
     "README.md": "1c2177977590a44a7b303850d1a01ca4433264b3240b6432d5c6afb2438e2353",
     "RESEARCH-PAPER.md": "9bd9fed3ab289890d108d2deeba20e3e14f97029abb48efcd0fb6308a7807201",
     "RIGHTS.md": "70308eba4e51e0ab0519a761e314bd203b3a309d509cb290a004a67415beed51",
@@ -99,7 +99,7 @@
     "figures/selection-comparison.svg": "487b97b3d8b160a1beeea69170d3c192c3233624362ecd810ed82561caca4b6f",
     "requirements.lock": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
     "tools/release_manifest.py": "adacb8c9043ddc07fd2af0db302c44b41e159db52877553c361808e9c4cfa538",
-    "verify.py": "a48de4b4dd889760499b36a6b05f56aa7677fdba0035adc7755732f17d4735d7"
+    "verify.py": "b1153df17df9631af8952bc97e5fb6dfbca06695c853b7948f2455d611990025"
   },
   "scope": "Explicit prepared release contents. Hash integrity is not human review or authenticity."
 }

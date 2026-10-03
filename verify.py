@@ -35,9 +35,13 @@ def main():
   p=R/name
   for target in re.findall(r'\]\(([^)]+)\)',p.read_text()):
    if '://' in target or target.startswith('mailto:'):continue
-   path=target.split('#')[0]
+   path,_,anchor=target.partition('#')
    if not path:continue
    dest=(p.parent/path).resolve();assert dest.exists() and (dest==R or R in dest.parents),(name,target)
+   if anchor and dest.suffix=='.md':
+    headings=re.findall(r'^#{1,6} +(.+)$',dest.read_text(),re.M)
+    slugs={re.sub(r'[^\w\- ]','',h.lower()).replace(' ','-') for h in headings}
+    assert anchor in slugs,(name,target,'missing heading anchor')
    links+=1
  # Narrow scanners report file names, never matching sensitive strings.
  patterns=[r'/Users/',r'/home/',r'(?i)-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY',r'gh[pousr]_[A-Za-z0-9]{30,}',r'\bsk-[A-Za-z0-9]{24,}',r'AKIA[0-9A-Z]{16}']
