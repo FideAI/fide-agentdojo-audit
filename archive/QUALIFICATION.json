@@ -1,0 +1,111 @@
+{
+  "status": "passed bounded computational qualification; private candidate; export approval pending",
+  "qualified_at_utc": "2026-10-02T01:03:23.342204+00:00",
+  "assistant_only": true,
+  "independent_human_review": false,
+  "python": "3.11.11",
+  "uv": "0.6.6",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "fresh_private_export_directories": 2,
+  "fresh_virtual_environments": 2,
+  "public_exact_commit_acquisitions": 2,
+  "frozen_dependency_versions": 70,
+  "dependency_install_flags": [
+    "--no-deps",
+    "--only-binary :all:"
+  ],
+  "original_full": {
+    "mode": "full",
+    "python": "3.11.11",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "dependency_lock_sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+    "fixtures": {
+      "passed": true,
+      "probe_cells": 48,
+      "probe_disagreements": 18,
+      "registration_cells": 24,
+      "registration_verdict_changes": 4,
+      "scope_pairs": 2,
+      "native_trace_cells": 12,
+      "classifier_controls": 9,
+      "network_attempts": 0
+    },
+    "scope": "Adapted scripts run by same assistant; not independent human review",
+    "inert_archive_analysis": {
+      "projected_tables_match": 4,
+      "cohort_hashes_match": 7400,
+      "selected_hashes_match": 200,
+      "note": "Same copied analysis logic on acquired raw records; not independently implemented adjudication"
+    },
+    "passed": true
+  },
+  "amended_full": {
+    "mode": "full",
+    "archive_classifier": "amended",
+    "amended_classifier_controls": 13,
+    "python": "3.11.11",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "dependency_lock_sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+    "fixtures": {
+      "passed": true,
+      "probe_cells": 48,
+      "probe_disagreements": 18,
+      "registration_cells": 24,
+      "registration_verdict_changes": 4,
+      "scope_pairs": 2,
+      "native_trace_cells": 12,
+      "classifier_controls": 9,
+      "network_attempts": 0
+    },
+    "scope": "Adapted scripts run by same assistant; not independent human review",
+    "inert_archive_analysis": {
+      "projected_tables_match": 4,
+      "cohort_hashes_match": 7400,
+      "selected_hashes_match": 200,
+      "note": "Same copied analysis logic on acquired raw records; not independently implemented adjudication"
+    },
+    "source_clean_after": true,
+    "passed": true
+  },
+  "frozen_input_preservation": {
+    "files_checked": 106,
+    "changed": [],
+    "passed": true,
+    "scope": "Frozen study files excluding .local, .venv and __pycache__; including exploratory outputs and earlier decoders"
+  },
+  "default_verification_scope": "Packaged derived-table arithmetic and integrity only; no raw-record independence",
+  "tested_executable_sha256": {
+    "acquire.py": "474a0724e865a6318c0e79dae384e7d3e33096c93c1e09d67b04313d0da1430e",
+    "export.py": "00b2ad3a72f373b7ec11b542efee746c3b177188711e7a5a301bbcd693a24279",
+    "reproduce.py": "79fcd9c44dd7244ebdc596cc9c32ead819b7422b5ec4e1eb55a75ebf0ce4e965",
+    "scripts/check_fixtures.py": "cdbfd0265be8952a10c0e347f2d39cb6b26eb18b1c3bb4b9b6b20963bf7ecd9c",
+    "scripts/context.py": "38b639b0897357874641c77cc05add85bec8c5cecce22db195cfe0e2335cca70",
+    "scripts/observability/amendment_controls.py": "16d8dc9541fadfc07578432906d105ea7374819b4da2b8fffe901a6e93241acf",
+    "scripts/observability/audit.py": "d3871a4fb1a809f6a7ebe2ebc993c22034aff3da3f2bd007997052c6d5890a1f",
+    "scripts/observability/audit_amended.py": "7fc88fe00b0020117cd2382e1194bc8495ae4c4d5cbe1b7e64ebb074a9b8b148",
+    "scripts/observability/check_amendment.py": "d8b0a7ca6e2797f19fc5ce0e6a798f185c7d64c6cc588b3980cbe28630adee17",
+    "scripts/observability/common.py": "d7194eb235a1277bbd94887d9d09d6afea1be043f85f7527b8e7e796d40fcaae",
+    "scripts/observability/native_controls.py": "ba04cc3bbcc14a948c09c6b229c11d13988ed53c9dd1f113ba5e7e9ebf0bcb97",
+    "scripts/observability/run_amended_audit.py": "b1f26a1ba453138dc025d917959442f2393d701ed13b27618d26e1c2cf67ace4",
+    "scripts/observability/summarize.py": "74c7ebba1306346b760caabf2c3b2c379a61683d23f1513e57fa072fc683de71",
+    "scripts/outcome/adjudicate.py": "5356f676c0f890170e7ffe731e446b1768c71e4c96e2ee020d62e8de3c218840",
+    "scripts/outcome/compare_scores.py": "a8024865b4d6db225ced7d38cb09be937d2f581be48d992315792e34943a8820",
+    "scripts/outcome/probe.py": "e9ca11ea768c0961102acd6f50433bd9e1f7893968145734f7052a716031537a",
+    "scripts/outcome/registration_test.py": "fe26f26e27b8dcfdc9ec9fac45b359ba0ed42b1576842d13ea2ebba6f4a3bda5",
+    "scripts/outcome/scan_records.py": "acd5605f4a26a393f49111a76eb7801c956b3543ffc38bcd3e1f5513b9f5ed17",
+    "scripts/outcome/scope_controls.py": "2337ab2d797fbac6d710776f0b161200b5b216821c6c13ce180e4e7e3aa21c1f",
+    "scripts/project.py": "a8edaa31feb06dc217efc16ce565f50a0c0f04d1d6dab18dc2154c74473151c8",
+    "verify.py": "c290f95c62c063e8c3d88bfee4db4e919ab3420a0501a03245a3cd8f43f577f4"
+  },
+  "limitations": [
+    "Version-pinned dependency list, not hash-locked artifacts; same-host uv wheel cache was available",
+    "One macOS ARM64 host only; Linux and Windows not qualified",
+    "Adapted original algorithms; no independent scientific implementation or human adjudication",
+    "Original classifier contradiction defect retained for frozen-result reproduction; amended classifier separately labeled",
+    "Raw historical source identity, trace completeness and real-world delivery remain unproved",
+    "No neural detector/model inference rerun, external email, outreach, or public release",
+    "Fide license, third-party/data rights, sensitive export and release approval remain pending"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "Hashes of preserved original private failure artifacts; content may contain machine paths and is not bundled. Substantive failures are described in FAILURES-AND-AMENDMENTS.md.",
+  "compatibility_artifacts": {
+    "results/attempt-1/audit.py": "974d077504da696f369e90f48ba3aa4731ee790ddf0f577aa44836b2b5e312c7",
+    "results/attempt-1/worker.py": "fefb969d7200b7b8aae44484e92db288b6e312f3660d62def2edc1d2824c45b8",
+    "results/attempt-1/input-freeze.json": "3217ae8e43b956e276141975edf492b6fd4c62c84715bd7521730891dd12afc4",
+    "results/audit-attempt-1.log": "aed819aa4043200e031e9be2dfa96cce417aaf9bb98c81b4ec6afb126554d88a",
+    "results/audit-attempt-2.log": "33ddc4eeecee9165f8accbcaafdaa08f8d0facaa4c21f6303d597315645107bc",
+    "results/validation-attempt-1.log": "73d6dfad63818aee1dcd72b9b6e647c94015dd2eac3616799358ca2ad3f17e1e"
+  }
+}

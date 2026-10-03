@@ -1,0 +1,17 @@
+{
+  "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "archive_export_manifest_sha256": "38690be10e43bf77736c5780a2bc36e6ac46573c5b113795130fa11a4610dc5d",
+  "source_documents": {
+    "MANUSCRIPT.md": "b6e5ac2aa1ef407532b4708135e0a13415800f7e945fef136de6150c57c39003",
+    "RESEARCH-PAPER.md": "f77966c70d82f2ee363ea8f4b4d20e708bd0852663f3f09dd6a668875933ab9e",
+    "CLAIMS.md": "a2fa154cdb95ad63b031784351346d1629bbea695971ca1df1db95e2df0c36d2"
+  },
+  "compatibility_original_scripts": {
+    "audit.py": "974d077504da696f369e90f48ba3aa4731ee790ddf0f577aa44836b2b5e312c7",
+    "worker.py": "913d279b360c793dd5d30ac728ec3004d26d4109f93fd466d06a0e40ffd79f8c",
+    "qualify.py": "e7095ceca6e5f987c2bf02f6dca0717e906a67c638e6c7077eed333f036a9864",
+    "summarize.py": "4f13af499be8278ee8aeb51149eb99b18e1ce28c374f8e933e7a1f0a4beac87e",
+    "regression_gate.py": "603ab95a7c9b28afdccdb6bce6ffacfd291dcaed417e271ec5053b298d59cea3"
+  },
+  "adaptation": "Archive allowlist unchanged. Compatibility path injection and fresh-run orchestration; result prose hashed, paths/stack traces omitted. Paper links rebased to minimized release evidence with an explicit release map. No new scientific claim."
+}

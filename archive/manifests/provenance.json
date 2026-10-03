@@ -1,0 +1,156 @@
+[
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/results/record-evidence.json",
+    "original_sha256": "3c20900f52cc4789b23888bfc1a4dddf97ad1151f1c89a978f2186747c0e7a7b",
+    "copy": "data/record-count-inputs.json",
+    "copy_sha256": "b58354f8de0a7eadc3cd0e2e926a8ee706a18efaa42ba2cbed4e89335ab559cf",
+    "changes": "Field allowlist and Boolean reduction via scripts/project.py; omit arguments, receipts, free-text errors and message content."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/results/adjudication.json",
+    "original_sha256": "da481c67da00842b4616208b61470f549506c51b0dc750033cad84b783540099",
+    "copy": "data/adjudication-count-inputs.json",
+    "copy_sha256": "4f8ff74b471958a73feb288f5501ca9590fdf15c6823720d257b2be663c9d495",
+    "changes": "Field allowlist and Boolean reduction via scripts/project.py; omit arguments, receipts, free-text errors and message content."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/results/comparison-evidence.json",
+    "original_sha256": "18814d9c4a85dcc874b2c45496c33a8160bcb60215d02ea998ecedfe679df885",
+    "copy": "data/comparison-count-inputs.json",
+    "copy_sha256": "8683f0ea669eea80e2f4fddcfe93eefd8b34396baf86cdb8085766641c1deb6f",
+    "changes": "Field allowlist and Boolean reduction via scripts/project.py; omit arguments, receipts, free-text errors and message content."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/results/audit-evidence.json",
+    "original_sha256": "fbfbef85da5efec8860025b4547a2ca0fa9ebb70e5c9c8da08d55516aef80052",
+    "copy": "data/observability-count-inputs.json",
+    "copy_sha256": "b8210799e7903de7144c5447d2e6136bbf37d21318b8828a76030d8ddb5a6422",
+    "changes": "Field allowlist and Boolean reduction via scripts/project.py; omit arguments, receipts, free-text errors and message content."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/sources/cohort-manifest.json",
+    "original_sha256": "6f88590e220642fb3a98347d46d06dca3bc34797c37ce58acc386a1b18561fcd",
+    "copy": "manifests/outcome-cohort.json",
+    "copy_sha256": "6f88590e220642fb3a98347d46d06dca3bc34797c37ce58acc386a1b18561fcd",
+    "changes": "Unchanged copy of relative paths and hashes."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/sources/cohort-manifest.json",
+    "original_sha256": "ec9de54b306d9adcb8e2f36280229f3e1c45076558f1a325c0a823b82081d269",
+    "copy": "manifests/observability-cohort.json",
+    "copy_sha256": "ec9de54b306d9adcb8e2f36280229f3e1c45076558f1a325c0a823b82081d269",
+    "changes": "Unchanged copy of relative paths and hashes."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/sources/code-manifest.json",
+    "original_sha256": "366e08beee0a3b1b1109416dd43f73c57ce7f1baf6db0c16ae3830aabc30c377",
+    "copy": "manifests/upstream-code.json",
+    "copy_sha256": "366e08beee0a3b1b1109416dd43f73c57ce7f1baf6db0c16ae3830aabc30c377",
+    "changes": "Unchanged copy of relative paths and hashes."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/probe.py",
+    "original_sha256": "a65e296c38f83055de2f5bb3d256bd1817b0f18ed55fe22dc9849c85ee0e7fda",
+    "copy": "scripts/outcome/probe.py",
+    "copy_sha256": "e9ca11ea768c0961102acd6f50433bd9e1f7893968145734f7052a716031537a",
+    "changes": "Replace local source/output binding and socket setup with shared isolated context."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/registration_test.py",
+    "original_sha256": "fe26f26e27b8dcfdc9ec9fac45b359ba0ed42b1576842d13ea2ebba6f4a3bda5",
+    "copy": "scripts/outcome/registration_test.py",
+    "copy_sha256": "fe26f26e27b8dcfdc9ec9fac45b359ba0ed42b1576842d13ea2ebba6f4a3bda5",
+    "changes": "Unchanged executable source; output context inherited from adapted probe.py."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/scope_controls.py",
+    "original_sha256": "2337ab2d797fbac6d710776f0b161200b5b216821c6c13ce180e4e7e3aa21c1f",
+    "copy": "scripts/outcome/scope_controls.py",
+    "copy_sha256": "2337ab2d797fbac6d710776f0b161200b5b216821c6c13ce180e4e7e3aa21c1f",
+    "changes": "Unchanged executable source; output context inherited from adapted probe.py."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/scan_records.py",
+    "original_sha256": "acd5605f4a26a393f49111a76eb7801c956b3543ffc38bcd3e1f5513b9f5ed17",
+    "copy": "scripts/outcome/scan_records.py",
+    "copy_sha256": "acd5605f4a26a393f49111a76eb7801c956b3543ffc38bcd3e1f5513b9f5ed17",
+    "changes": "Unchanged executable source; output context inherited from adapted probe.py."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/adjudicate.py",
+    "original_sha256": "5356f676c0f890170e7ffe731e446b1768c71e4c96e2ee020d62e8de3c218840",
+    "copy": "scripts/outcome/adjudicate.py",
+    "copy_sha256": "5356f676c0f890170e7ffe731e446b1768c71e4c96e2ee020d62e8de3c218840",
+    "changes": "Unchanged executable source; output context inherited from adapted probe.py."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/compare_scores.py",
+    "original_sha256": "a8024865b4d6db225ced7d38cb09be937d2f581be48d992315792e34943a8820",
+    "copy": "scripts/outcome/compare_scores.py",
+    "copy_sha256": "a8024865b4d6db225ced7d38cb09be937d2f581be48d992315792e34943a8820",
+    "changes": "Unchanged executable source; output context inherited from adapted probe.py."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/common.py",
+    "original_sha256": "7639eae9868e594e60f48928b8c6266fd59cacfccbeee0ef280d328f36c48fb8",
+    "copy": "scripts/observability/common.py",
+    "copy_sha256": "d7194eb235a1277bbd94887d9d09d6afea1be043f85f7527b8e7e796d40fcaae",
+    "changes": "Replace sibling-directory/environment binding and socket setup with shared isolated context."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/audit.py",
+    "original_sha256": "d3871a4fb1a809f6a7ebe2ebc993c22034aff3da3f2bd007997052c6d5890a1f",
+    "copy": "scripts/observability/audit.py",
+    "copy_sha256": "d3871a4fb1a809f6a7ebe2ebc993c22034aff3da3f2bd007997052c6d5890a1f",
+    "changes": "Unchanged executable source; output context inherited from adapted common.py."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/native_controls.py",
+    "original_sha256": "ba04cc3bbcc14a948c09c6b229c11d13988ed53c9dd1f113ba5e7e9ebf0bcb97",
+    "copy": "scripts/observability/native_controls.py",
+    "copy_sha256": "ba04cc3bbcc14a948c09c6b229c11d13988ed53c9dd1f113ba5e7e9ebf0bcb97",
+    "changes": "Unchanged executable source; output context inherited from adapted common.py."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/summarize.py",
+    "original_sha256": "74c7ebba1306346b760caabf2c3b2c379a61683d23f1513e57fa072fc683de71",
+    "copy": "scripts/observability/summarize.py",
+    "copy_sha256": "74c7ebba1306346b760caabf2c3b2c379a61683d23f1513e57fa072fc683de71",
+    "changes": "Unchanged executable source; output context inherited from adapted common.py."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/requirements.lock",
+    "original_sha256": "f3f90072f3bdcac942bb4671927e319722efba1438e65ad6afc0f9859519a838",
+    "copy": "requirements.lock",
+    "copy_sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+    "changes": "Remove editable .local/agentdojo entry; dependencies retain exact versions. Runtime imports source only from separately acquired exact commit. No dependency re-resolution."
+  },
+  {
+    "original": "investigations/2026-10-01-security-outcome-audit/validate.py",
+    "original_sha256": "0adb0a736e1a0edb2aec13d1566facfe9f66342b1e27e6f388e7b1bb42990f1c",
+    "copy": "scripts/check_fixtures.py",
+    "copy_sha256": "cdbfd0265be8952a10c0e347f2d39cb6b26eb18b1c3bb4b9b6b20963bf7ecd9c",
+    "changes": "Extracted authored-fixture assertions only; removed raw-record/literature/sibling-path checks. New full runner checks raw manifest hashes and projected-table equality separately."
+  },
+  {
+    "original": "investigations/2026-10-01-trace-observability/validate.py",
+    "original_sha256": "73216e43608daa83c2436be33587475b9d62bd1734fec56513d058a85983c1ee",
+    "copy": "scripts/check_fixtures.py",
+    "copy_sha256": "cdbfd0265be8952a10c0e347f2d39cb6b26eb18b1c3bb4b9b6b20963bf7ecd9c",
+    "changes": "Extracted authored-fixture assertions only; removed raw-record/literature/sibling-path checks. New full runner checks raw manifest hashes and projected-table equality separately."
+  },
+  {
+    "original": "projects/agentdojo-evaluation-integrity/review/2026-10-01/selection/patched/audit.py",
+    "original_sha256": "7fc88fe00b0020117cd2382e1194bc8495ae4c4d5cbe1b7e64ebb074a9b8b148",
+    "copy": "scripts/observability/audit_amended.py",
+    "copy_sha256": "7fc88fe00b0020117cd2382e1194bc8495ae4c4d5cbe1b7e64ebb074a9b8b148",
+    "changes": "Unchanged additive review amendment. Original audit.py retained separately; context binds all outputs to a fresh run."
+  },
+  {
+    "original": "projects/agentdojo-evaluation-integrity/review/2026-10-01/selection/amendment_controls.py",
+    "original_sha256": "16d8dc9541fadfc07578432906d105ea7374819b4da2b8fffe901a6e93241acf",
+    "copy": "scripts/observability/amendment_controls.py",
+    "copy_sha256": "16d8dc9541fadfc07578432906d105ea7374819b4da2b8fffe901a6e93241acf",
+    "changes": "Unchanged additive review amendment. Original audit.py retained separately; context binds all outputs to a fresh run."
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "declarations": 184,
+  "cells": 815,
+  "arms": {
+    "default": {
+      "native_cells": 892,
+      "matches": 769,
+      "mismatches": 25,
+      "ambiguous": 21,
+      "missing": 0,
+      "unexpected": 77,
+      "changed_cells": 0
+    },
+    "late": {
+      "native_cells": 892,
+      "matches": 769,
+      "mismatches": 25,
+      "ambiguous": 21,
+      "missing": 0,
+      "unexpected": 77,
+      "changed_cells": 2
+    },
+    "rebuilt": {
+      "native_cells": 892,
+      "matches": 794,
+      "mismatches": 0,
+      "ambiguous": 21,
+      "missing": 0,
+      "unexpected": 77,
+      "changed_cells": 32
+    }
+  },
+  "controls": {
+    "wrong_module_detected": true,
+    "too_early_v112_detected": true,
+    "registered_only_rule_violations": 0,
+    "all_id_sets_equal": true
+  }
+}

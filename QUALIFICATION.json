@@ -1,0 +1,95 @@
+{
+  "status": "combined standalone candidate qualified on one host; private pending release",
+  "local_date": "2026-10-02",
+  "independent_human_review": false,
+  "archive": {
+    "amended": {
+      "mode": "full",
+      "archive_classifier": "amended",
+      "amended_classifier_controls": 13,
+      "python": "3.11.11",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+      "dependency_lock_sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+      "fixtures": {
+        "passed": true,
+        "probe_cells": 48,
+        "probe_disagreements": 18,
+        "registration_cells": 24,
+        "registration_verdict_changes": 4,
+        "scope_pairs": 2,
+        "native_trace_cells": 12,
+        "classifier_controls": 9,
+        "network_attempts": 0
+      },
+      "scope": "Adapted scripts run by same assistant; not independent human review",
+      "inert_archive_analysis": {
+        "projected_tables_match": 4,
+        "cohort_hashes_match": 7400,
+        "selected_hashes_match": 200,
+        "note": "Same copied analysis logic on acquired raw records; not independently implemented adjudication"
+      },
+      "source_clean_after": true,
+      "passed": true
+    },
+    "original": {
+      "mode": "full",
+      "archive_classifier": "original",
+      "amended_classifier_controls": 13,
+      "python": "3.11.11",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+      "dependency_lock_sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+      "fixtures": {
+        "passed": true,
+        "probe_cells": 48,
+        "probe_disagreements": 18,
+        "registration_cells": 24,
+        "registration_verdict_changes": 4,
+        "scope_pairs": 2,
+        "native_trace_cells": 12,
+        "classifier_controls": 9,
+        "network_attempts": 0
+      },
+      "scope": "Adapted scripts run by same assistant; not independent human review",
+      "inert_archive_analysis": {
+        "projected_tables_match": 4,
+        "cohort_hashes_match": 7400,
+        "selected_hashes_match": 200,
+        "note": "Same copied analysis logic on acquired raw records; not independently implemented adjudication"
+      },
+      "source_clean_after": true,
+      "passed": true
+    }
+  },
+  "compatibility": {
+    "passed": true,
+    "projected_result_files_match": 12,
+    "source_files_unchanged": 100,
+    "upstream_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "python": "3.11.11",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "native_cells_per_arm": 892,
+    "arms": 3,
+    "utility_branch_controls": 6,
+    "expected_blanket_repair_gate_exit": 1,
+    "scope": "Portable adapted-script computational rerun; not independent human review or new model outcomes."
+  },
+  "figures": {
+    "regenerated": true,
+    "formats": [
+      "png",
+      "svg",
+      "pdf"
+    ],
+    "charts": 2
+  },
+  "environment": "Fresh Python 3.11 environments; public exact-commit source acquisition. Same-host package cache available.",
+  "limits": [
+    "One macOS ARM64 host only",
+    "Dependency versions, not wheel hashes",
+    "Same adapted algorithms; not independent human adjudication",
+    "No historical runtime attribution or general semantic repair qualification",
+    "Clean Git checkout verification pending"
+  ]
+}

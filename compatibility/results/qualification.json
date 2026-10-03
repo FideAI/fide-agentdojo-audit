@@ -1,0 +1,99 @@
+{
+  "guard_checks": [
+    {
+      "operation": "connect",
+      "blocked": true,
+      "events": [
+        "socket.connect"
+      ]
+    },
+    {
+      "operation": "connect_ex",
+      "blocked": true,
+      "events": [
+        "socket.connect"
+      ]
+    },
+    {
+      "operation": "create_connection",
+      "blocked": true,
+      "events": [
+        "socket.getaddrinfo"
+      ]
+    },
+    {
+      "operation": "process",
+      "blocked": true,
+      "events": [
+        "subprocess.Popen"
+      ]
+    }
+  ],
+  "utility_branch_controls": [
+    {
+      "arm": "before_import",
+      "case": "lowercase",
+      "module": "agentdojo.default_suites.v1.workspace.user_tasks",
+      "utility": true
+    },
+    {
+      "arm": "before_import",
+      "case": "uppercase",
+      "module": "agentdojo.default_suites.v1.workspace.user_tasks",
+      "utility": false
+    },
+    {
+      "arm": "before_import",
+      "case": "wrong",
+      "module": "agentdojo.default_suites.v1.workspace.user_tasks",
+      "utility": false
+    },
+    {
+      "arm": "after_late_import",
+      "case": "lowercase",
+      "module": "agentdojo.default_suites.v1_1_2.workspace.user_tasks",
+      "utility": true
+    },
+    {
+      "arm": "after_late_import",
+      "case": "uppercase",
+      "module": "agentdojo.default_suites.v1_1_2.workspace.user_tasks",
+      "utility": true
+    },
+    {
+      "arm": "after_late_import",
+      "case": "wrong",
+      "module": "agentdojo.default_suites.v1_1_2.workspace.user_tasks",
+      "utility": false
+    }
+  ],
+  "qualification_import_blocked_events": [
+    "socket.__new__"
+  ],
+  "native_registered_only_parity": {
+    "default": {
+      "checked": 892,
+      "violations": 0
+    },
+    "late": {
+      "checked": 892,
+      "violations": 0
+    },
+    "rebuilt": {
+      "checked": 892,
+      "violations": 0
+    }
+  },
+  "worker_blocked_events_excluding_selftest": {
+    "default": {
+      "socket.__new__": 1
+    },
+    "late": {
+      "socket.__new__": 1
+    },
+    "rebuilt": {
+      "socket.__new__": 1
+    }
+  },
+  "scope": "Utility helpers check_added_to_file and check_new_email held true; no complete-task or live-tool claim. Guard is Python-level, not OS sandbox."
+}

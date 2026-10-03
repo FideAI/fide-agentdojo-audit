@@ -1,0 +1,191 @@
+{
+  "status": "PRIVATE candidate; explicit export approval pending",
+  "manifest_self_included": false,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "88a479ea2e5a7f9927fa24c5c6ae6f4ebbc0a4253c52f40e3097774d4cb64c0e",
+      "bytes": 7854
+    },
+    {
+      "path": "RIGHTS.md",
+      "sha256": "a86f2899cb5583f8ac5a7647b5a2dc7d44c4e514315786181a07017f4ed14739",
+      "bytes": 1954
+    },
+    {
+      "path": "UPSTREAM-LICENSE.txt",
+      "sha256": "4285a071f2d382338e52b4fb0a186d952984a34d43a33d8872e1a1d8cb43401e",
+      "bytes": 1161
+    },
+    {
+      "path": "source.json",
+      "sha256": "754d5e693b9b0bd61631434b2c14ded9b002e7f0d145b6b324de9ded22b28ac4",
+      "bytes": 323
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "ca2794f43905561afea7393b060d7c8e61a37f01939269a9cea385e73487489c",
+      "bytes": 1277
+    },
+    {
+      "path": ".python-version",
+      "sha256": "49a506dd32096b010d75205acf3430c9ae6c40351888129499e5a5e487126c93",
+      "bytes": 5
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e71840fbafea0b340b81b90136e04909c4c2aef19b7434438fbd7843b55945f8",
+      "bytes": 40
+    },
+    {
+      "path": "QUALIFICATION.json",
+      "sha256": "50abe710694dd4dfa37ac0c7a5143d8d46636476b683a366769adc3b3cae2d3b",
+      "bytes": 5798
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c290f95c62c063e8c3d88bfee4db4e919ab3420a0501a03245a3cd8f43f577f4",
+      "bytes": 6466
+    },
+    {
+      "path": "acquire.py",
+      "sha256": "474a0724e865a6318c0e79dae384e7d3e33096c93c1e09d67b04313d0da1430e",
+      "bytes": 1239
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "79fcd9c44dd7244ebdc596cc9c32ead819b7422b5ec4e1eb55a75ebf0ce4e965",
+      "bytes": 5357
+    },
+    {
+      "path": "export.py",
+      "sha256": "00b2ad3a72f373b7ec11b542efee746c3b177188711e7a5a301bbcd693a24279",
+      "bytes": 910
+    },
+    {
+      "path": "scripts/project.py",
+      "sha256": "a8edaa31feb06dc217efc16ce565f50a0c0f04d1d6dab18dc2154c74473151c8",
+      "bytes": 1708
+    },
+    {
+      "path": "scripts/context.py",
+      "sha256": "38b639b0897357874641c77cc05add85bec8c5cecce22db195cfe0e2335cca70",
+      "bytes": 1937
+    },
+    {
+      "path": "scripts/check_fixtures.py",
+      "sha256": "cdbfd0265be8952a10c0e347f2d39cb6b26eb18b1c3bb4b9b6b20963bf7ecd9c",
+      "bytes": 2889
+    },
+    {
+      "path": "scripts/outcome/probe.py",
+      "sha256": "e9ca11ea768c0961102acd6f50433bd9e1f7893968145734f7052a716031537a",
+      "bytes": 4295
+    },
+    {
+      "path": "scripts/outcome/registration_test.py",
+      "sha256": "fe26f26e27b8dcfdc9ec9fac45b359ba0ed42b1576842d13ea2ebba6f4a3bda5",
+      "bytes": 2943
+    },
+    {
+      "path": "scripts/outcome/scope_controls.py",
+      "sha256": "2337ab2d797fbac6d710776f0b161200b5b216821c6c13ce180e4e7e3aa21c1f",
+      "bytes": 1029
+    },
+    {
+      "path": "scripts/outcome/scan_records.py",
+      "sha256": "acd5605f4a26a393f49111a76eb7801c956b3543ffc38bcd3e1f5513b9f5ed17",
+      "bytes": 7148
+    },
+    {
+      "path": "scripts/outcome/adjudicate.py",
+      "sha256": "5356f676c0f890170e7ffe731e446b1768c71e4c96e2ee020d62e8de3c218840",
+      "bytes": 6028
+    },
+    {
+      "path": "scripts/outcome/compare_scores.py",
+      "sha256": "a8024865b4d6db225ced7d38cb09be937d2f581be48d992315792e34943a8820",
+      "bytes": 4257
+    },
+    {
+      "path": "scripts/observability/audit_amended.py",
+      "sha256": "7fc88fe00b0020117cd2382e1194bc8495ae4c4d5cbe1b7e64ebb074a9b8b148",
+      "bytes": 8368
+    },
+    {
+      "path": "scripts/observability/amendment_controls.py",
+      "sha256": "16d8dc9541fadfc07578432906d105ea7374819b4da2b8fffe901a6e93241acf",
+      "bytes": 3098
+    },
+    {
+      "path": "scripts/observability/check_amendment.py",
+      "sha256": "d8b0a7ca6e2797f19fc5ce0e6a798f185c7d64c6cc588b3980cbe28630adee17",
+      "bytes": 499
+    },
+    {
+      "path": "scripts/observability/run_amended_audit.py",
+      "sha256": "b1f26a1ba453138dc025d917959442f2393d701ed13b27618d26e1c2cf67ace4",
+      "bytes": 147
+    },
+    {
+      "path": "scripts/observability/common.py",
+      "sha256": "d7194eb235a1277bbd94887d9d09d6afea1be043f85f7527b8e7e796d40fcaae",
+      "bytes": 683
+    },
+    {
+      "path": "scripts/observability/audit.py",
+      "sha256": "d3871a4fb1a809f6a7ebe2ebc993c22034aff3da3f2bd007997052c6d5890a1f",
+      "bytes": 7536
+    },
+    {
+      "path": "scripts/observability/native_controls.py",
+      "sha256": "ba04cc3bbcc14a948c09c6b229c11d13988ed53c9dd1f113ba5e7e9ebf0bcb97",
+      "bytes": 6766
+    },
+    {
+      "path": "scripts/observability/summarize.py",
+      "sha256": "74c7ebba1306346b760caabf2c3b2c379a61683d23f1513e57fa072fc683de71",
+      "bytes": 1327
+    },
+    {
+      "path": "data/record-count-inputs.json",
+      "sha256": "b58354f8de0a7eadc3cd0e2e926a8ee706a18efaa42ba2cbed4e89335ab559cf",
+      "bytes": 4439062
+    },
+    {
+      "path": "data/adjudication-count-inputs.json",
+      "sha256": "4f8ff74b471958a73feb288f5501ca9590fdf15c6823720d257b2be663c9d495",
+      "bytes": 27339
+    },
+    {
+      "path": "data/comparison-count-inputs.json",
+      "sha256": "8683f0ea669eea80e2f4fddcfe93eefd8b34396baf86cdb8085766641c1deb6f",
+      "bytes": 63911
+    },
+    {
+      "path": "data/observability-count-inputs.json",
+      "sha256": "b8210799e7903de7144c5447d2e6136bbf37d21318b8828a76030d8ddb5a6422",
+      "bytes": 97026
+    },
+    {
+      "path": "manifests/outcome-cohort.json",
+      "sha256": "6f88590e220642fb3a98347d46d06dca3bc34797c37ce58acc386a1b18561fcd",
+      "bytes": 1494753
+    },
+    {
+      "path": "manifests/observability-cohort.json",
+      "sha256": "ec9de54b306d9adcb8e2f36280229f3e1c45076558f1a325c0a823b82081d269",
+      "bytes": 42553
+    },
+    {
+      "path": "manifests/upstream-code.json",
+      "sha256": "366e08beee0a3b1b1109416dd43f73c57ce7f1baf6db0c16ae3830aabc30c377",
+      "bytes": 13700
+    },
+    {
+      "path": "manifests/provenance.json",
+      "sha256": "c77fdcaea87013eba4734c7b6686fc62ce22b3255a2d022dcfc92b44fe1e98e1",
+      "bytes": 9679
+    }
+  ]
+}
