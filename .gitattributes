@@ -1,0 +1,4 @@
+# Markdown hard breaks and generated/source-diff whitespace are intentional.
+*.md whitespace=-blank-at-eol
+*.svg -whitespace
+*.diff -whitespace

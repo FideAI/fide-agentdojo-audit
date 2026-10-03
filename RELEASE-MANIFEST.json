@@ -1,5 +1,6 @@
 {
   "files": {
+    ".gitattributes": "50aab314b467f4ecbe790298d82c2114e3d28ea8a7b75409b60cc8a6d5abd8b0",
     ".github/workflows/verify.yml": "6709e467b22d4873ea4a79c3f293ce1e54a433536f005236df26d4444e90bea3",
     ".gitignore": "2bdb8ea16a3874d239c0d70702c604013fddb9ff785fe51feffa4462eac4d234",
     "AGENTS.md": "5607c4196f9fa4311d3eda761e42fc54c13ff2233351974d0d2305ec7c987f47",
