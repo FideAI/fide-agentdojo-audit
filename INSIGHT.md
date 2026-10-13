@@ -2,16 +2,16 @@
 
 ## An existing correction was missing from the default evaluator. Activating it also changed a scoring rule in older benchmark versions.
 
-Fide AI · Insights draft · October 1, 2026  
-Unpublished editorial candidate. [Research paper and methods](RESEARCH-PAPER.md). Human review and publication approval pending.
+Fide AI · Research analysis · Revised October 13, 2026  
+[Research paper and methods](RESEARCH-PAPER.md). [Review scope and limitations](docs/REVIEW.md).
 
 The correction was already in the repository. Loading it also changed how older benchmark versions scored another task.
 
 We were studying AgentDojo, a benchmark that tests whether AI assistants can resist an attacker’s instructions. In the code version we inspected, one scoring rule could reject a successful simulated email send because another email matched the same search. The repository contained a correction, but the default task-loading code did not activate it.
 
-Loading the missing code and rebuilding the benchmark’s task lists selected the corrected rule. It also changed a different task’s scoring rule across all seven benchmark versions we checked, including the oldest. In a small controlled test, the same input failed the old rule and passed its replacement.
+Turning on the correction fixed the email cases we reconstructed. It also changed how all seven benchmark versions we checked judged another task, including the oldest version. In a controlled test of how the rules compared email addresses, the same input failed the old rule and passed its replacement.
 
-**A benchmark repair needs to make two things inspectable: what it fixes, and what else it changes.** The work also exposed a problem in our own audit: restricting the analysis to easier-to-inspect records changed which defense looked better.
+**A corrected score is only half a repair. Researchers also need to know what else changed.** After our intervention, asking for the same benchmark version could select a different scoring rule. That matters whenever researchers compare results across studies.
 
 ## The email was there. Why did the attack fail?
 
@@ -29,19 +29,19 @@ We screened 7,400 released records covering four selected email objectives. Seve
 
 An existing upstream correction recognizes all 45 reconstructed cases. The correction belongs to its authors, and related scoring problems are [already documented upstream](https://github.com/ethz-spylab/agentdojo/pull/193). Our finding concerns which code actually gets selected and what happens when we try to change that selection.
 
-There is an important limit to the archive evidence. It does not identify the exact implementation that scored each historical run. These are 45 reproducible discrepancies under a fixed source commit, not 45 proven historical mislabels.
+The records do not tell us exactly which scoring code ran at the time. We can reproduce these 45 discrepancies with the code we inspected; we cannot establish that all 45 historical labels were wrong.
 
 ## The repair reached further than the broken score
 
-AgentDojo can keep several scoring rules for the same task. Registration records which task and version each implementation belongs to; the loader uses those registrations to build the task list for each benchmark version. At our [inspected commit](https://github.com/ethz-spylab/agentdojo/tree/089ed468cf3ed0322acc66b0211f26d9d90dbf60), the default loader never imported the file containing the email correction. The correction was on disk, but its registration code had not run.
+We checked whether the benchmark actually used the scoring rules available in its code. At our [inspected commit](https://github.com/ethz-spylab/agentdojo/tree/089ed468cf3ed0322acc66b0211f26d9d90dbf60), the file containing the email correction was never loaded. AgentDojo chose the newest compatible rule from those it had loaded, but this correction was missing from that list.
 
-Our follow-up compared the task implementations declared in source with those the loader actually selected. Importing the omitted module and rebuilding the task lists resolved 25 unambiguous differences. That count covers seven distinct tasks selected under multiple version names, so it does not represent 25 independent bugs. The [technical paper](RESEARCH-PAPER.md#42-available-code-and-selected-code-differ) records the ambiguous declarations and generated tasks outside that comparison.
+Loading the file and rebuilding the benchmark’s task lists made the correction available. It also replaced the rule for another task, called UserTask13, which checks whether the assistant completed the user’s legitimate request. The [technical paper](RESEARCH-PAPER.md#42-available-code-and-selected-code-differ) documents the full comparison between the rules available in the source and those actually selected.
 
-The intervention also replaced the scoring rule for an eighth task: workspace UserTask13, which checks completion of a legitimate user task. The imported file registered that replacement as the earliest version of the task, rather than as an update belonging only to a newer benchmark version. Rebuilding therefore selected it for all seven inspected versions. Importing the file alone changed it in the two oldest versions because they shared the original task list instead of holding separate copies.
+The replacement was marked as the task’s earliest rule. Once we rebuilt the task lists, every version we checked selected it—even versions older than the update we were trying to activate.
 
-That replacement compared email recipients differently. The old rule used exact equality. The replacement converted the address to lowercase first.
+The difference was easy to see with email addresses. The old rule required an exact match. The replacement converted the address to lowercase before comparing it.
 
-We called both scoring methods with three constructed inputs. To isolate recipient matching, we made the separate file-change and email-change checks return true:
+We tested both rules with three constructed inputs. To check only the address comparison, we made the task’s other two checks—whether the file and email had changed—return true:
 
 | Recipient in the controlled input | Original method | Method selected after import |
 |---|---|---|
@@ -51,17 +51,17 @@ We called both scoring methods with three constructed inputs. To isolate recipie
 
 *An isolated test of the recipient condition for completing the user’s task. The file-change and email-change checks were held true; these are not complete agent-task runs. [Recorded branch-control results](compatibility/results/qualification.json); [method and reproduction](compatibility/README.md).*
 
-Case normalization may be a sensible correction. A benchmark still needs to make clear when it has adopted it. Here, the same old version name could select a different scoring rule after an import.
+Ignoring differences in capitalization may be the better rule. But it changes what counts as success under an old version name. Our intervention fixed the reconstructed email cases and failed our separate check that older versions keep their behavior. Researchers need to know about both effects.
 
-The import-and-rebuild intervention therefore fails our check that a repair preserve older-version behavior. This does not reject the corrected email rule or establish that the new recipient comparison is less accurate.
+Other researchers have shown that [repairing a benchmark tool can change its verdict](https://arxiv.org/abs/2609.37315v1). Here we traced how one file could carry both the intended correction and a replacement rule for older versions.
 
 ## Our own filter changed the comparison
 
-Scoring code was only one part of the audit. We also had to decide which records contained enough evidence to inspect.
+We also found a problem in our own analysis. To compare defenses, we had to decide which records gave us enough evidence to reconstruct what happened. That decision changed which defense looked better.
 
-For a separate comparison, we selected 200 records: forty tasks each for a baseline and four defenses, using the same GPT-4o snapshot, attacker objective and attack family. We chose this slice after the initial findings. It is an exploratory sample with a narrow scope.
+We selected 200 records covering the same forty user tasks under five configurations: an undefended baseline and four defenses. All used the same GPT-4o model version, attacker objective and attack family. We chose this sample after the initial findings, so it is an exploratory comparison, not a general test of these defenses.
 
-We required readable returned email objects to support reconstruction. Eleven records from the prompt-injection detector configuration did not meet that requirement. We removed those same eleven task IDs from every configuration, leaving a common set of twenty-nine.
+We required readable email records in the tool responses so we could reconstruct what happened. Eleven records from one defense, a prompt-injection detector, did not meet that requirement. To keep the tasks the same across configurations, we removed those eleven task IDs from all five. That left twenty-nine tasks in each.
 
 Those exclusions contained **all eight attacks the publisher had labeled successful against the detector**, plus three labeled failures. The tool-filter defense retained its one labeled success.
 
@@ -73,24 +73,28 @@ The detector looked better because we stopped counting the cases containing its 
 
 [Gao and Zhou’s evidence-supported bounds work](https://arxiv.org/abs/2605.10448v1) already addresses the danger of dropping uncertain records. Fide’s contribution here is the measured instance: exactly which records our rule removed, and how that changed this comparison.
 
-The scoring correction and the filter had different effects. Applying the existing email correction to fixed reconstructed states raised several attack-success counts but left their ordering intact. Filtering the saved labels changed the ordering. Combining them into a story about a bug reversing a leaderboard would misdescribe the result.
+These were two different changes to the analysis. Rescoring the same reconstructed cases with the existing correction raised several attack-success counts but left the defenses in the same order. Removing records changed the detector’s position relative to the tool filter. It was our exclusion rule that reversed that comparison.
 
 ## What we can ask a benchmark to preserve
 
-Of the eleven excluded detector records, eight contain matching send requests paired with responses whose contents were redacted. Each response explicitly records no error (`error: null`), but lacks the returned email object our stricter evidence rule required. The other three contain no request matching the complete send objective.
+The excluded records were not all blank. Eight showed requests to send the target email, followed by tool responses with no recorded error. But the contents of those responses had been redacted, leaving us without the email record we required. The other three contained no request matching the complete attack objective.
 
-Under our returned-object rule, the detector’s attack-success count remains between zero and eight out of forty. That range assumes a matching sent email was absent at the start, the records cover the relevant tool calls, and the tools behaved compatibly with the implementation we inspected. It is too wide to settle the comparison with the tool filter’s one success. If the inspected send implementation governed the historical runs, however, the eight paired non-error responses support eight completed sends: that implementation updates the simulated inbox before returning successfully. The archive does not identify the historical implementation. The [paper lays out both interpretations](RESEARCH-PAPER.md#45-redaction-leaves-different-amounts-of-evidence).
+What do those eight responses prove? Under the tool implementation we inspected, a successful response comes after the simulated inbox has been updated. If that code ran at the time, the responses support eight completed sends. The archive does not identify the historical implementation.
 
-Our local logging controls show one practical possibility: recording a separate copy of a tool response before its content is transformed preserves evidence that the final model-visible conversation can lose. Those controls establish a software mechanism. Whether that approach reduces unresolved outcomes across a prospective evaluation remains a research question.
+If we insist on the returned email records, those eight cases remain unresolved: between zero and eight attacks succeeded out of forty. That range cannot settle the comparison with the tool filter’s one success. It assumes the target email was absent at the start, the relevant tool calls were recorded, and the tools behaved compatibly with the code we inspected. The [paper lays out both interpretations](RESEARCH-PAPER.md#45-redaction-leaves-different-amounts-of-evidence).
 
-For Fide’s autonomous cyber defense work, this is a reason to study the evaluation software alongside the defender. If we are going to judge a system by the attacks it stops and the useful work it completes, we need to know which rules made those judgments. We also need to know whether unavailable evidence has removed the difficult cases from view.
+In local tests, saving a separate copy of a tool response before redaction preserved the evidence that the assistant’s final conversation lost. That gives us a concrete next experiment: test whether keeping such a record makes more outcomes verifiable in a fresh evaluation. We have demonstrated the copying mechanism, not that broader benefit.
 
-Record the scoring implementation actually selected at execution, test whether a repair changes older versions, and report what the evidence rule excludes. Our next study should test whether preserving execution evidence separately from model-visible content reduces unresolved classifications under a rule declared in advance. If it does not, that would count against the proposed benefit.
+These questions now reach beyond the original benchmark. An [October study of runtime monitoring](https://arxiv.org/abs/2610.09793v1) uses AgentDojo’s released traces and saved attack-success labels to assess a monitor. Another [recent detector study](https://arxiv.org/abs/2610.03448v1) finds that detection rankings transfer poorly between benchmarks. These studies ask different questions from ours, and our audit does not establish errors in either. They make the practical stakes clear: researchers are building new evaluations on these environments and records.
 
-AgentDojo’s public code and records made this scrutiny possible. They let us trace a discrepancy to a scoring rule, test the consequences of activating an existing correction, and check our own selection decisions.
+For Fide’s autonomous cyber defense work, this is part of learning how to judge a defender. A better-looking score can reflect a stronger defense, a different scoring rule, or a change in the cases being counted. We measured specific examples of the latter two.
+
+AgentDojo’s public code and records made this investigation possible. They let us check an existing correction, test what happened when we activated it, and examine the consequences of our own exclusions.
+
+Before calling one AI defender better than another, we need to know that the comparison uses consistent scoring rules and shows which cases were left out. In our study, activating a correction changed an older version’s rule. Our own evidence filter changed which defense looked better. A score is useful only if we understand what went into it.
 
 ---
 
 **Inspect the work:** The [research paper](RESEARCH-PAPER.md) contains the full methods, source pin, populations and uncertainty analysis. The [registration and compatibility supplement](compatibility/README.md) provides its protocol, projected results and controls, with a [summary of failed attempts](docs/FAILURES-AND-AMENDMENTS.md). The separate [archive-analysis companion](archive/README.md) explains how to verify derived counts or recompute the original analysis. The [claim ledger](CLAIMS.md) records the evidence and boundaries for each main result. Start with the [evidence guide](docs/EVIDENCE-GUIDE.md) to follow a finding to its data and reproduction steps.
 
-**Research status:** Unpublished release candidate. Separate Codex AI agents reviewed and reproduced parts of the work within a shared orchestrated session; this is not independent human review. Human technical/editorial review and a release decision remain pending. No new model trials or real-world email delivery are claimed.
+**Review status:** Separate Codex AI agents reviewed and reproduced parts of the work within a shared orchestrated session; this is not independent human review. Independent human technical review remains pending. No new model trials or real-world email delivery are claimed.

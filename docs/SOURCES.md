@@ -12,3 +12,10 @@ AgentDojo source and released records are pinned to commit `089ed468cf3ed0322acc
 The private research process retained full-text/source snapshots and exact acquisition records. Those snapshots are not redistributed here. This is a bounded source review, not a systematic search establishing priority. The existing correction belongs to upstream authors.
 
 [Acquisition metadata](SOURCE-ACQUISITIONS.json) preserves exact URLs, retrieval times and content hashes without redistributing full texts.
+
+## October 13 relevance refresh
+
+- [Passing the Test You Trained On, Liu, v1](https://arxiv.org/abs/2610.03448v1): recent detector evaluation on replay-derived tool outputs; distinct from our record-exclusion comparison.
+- [Formal Runtime Verification, Kekatos et al., v1](https://arxiv.org/abs/2610.09793v1): offline monitoring and trace requirements; a downstream use of saved AgentDojo labels, not a result we reproduced or corrected.
+
+Targeted full-text methods/results/limitations review also revisited the contract audit’s constructed repair controls and Gao and Zhou’s evidence-selection framework. The specific registration/old-version compatibility result leads the revised paper. Broader benchmark-audit, evidence-bounds and logging ideas are credited prior work. At retrieval, upstream main still matched the study pin and PRs 191/193 were open and unmerged. Acquisition metadata records the dated check. No new experiments or claim of global priority resulted from this refresh.

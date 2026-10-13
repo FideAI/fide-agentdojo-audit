@@ -1,6 +1,6 @@
 # Fide AgentDojo audit
 
-**Unpublished research release candidate. Repository prepared privately; human review and coordinated article release remain pending.**
+A research companion prepared for coordinated release with Fide’s AgentDojo article. The paper is not peer reviewed; independent human technical review remains pending. See the [release checklist](RELEASE.md) for the current publication decision and merge order.
 
 A reproducible case study of evaluator selection, repair compatibility and evidence filtering in AgentDojo. The same recorded behavior can receive a different score when a different evaluator is selected. Activating an existing correction also changes a scoring rule under older benchmark versions.
 
@@ -11,7 +11,7 @@ A reproducible case study of evaluator selection, repair compatibility and evide
 - [Compatibility experiment](compatibility/README.md)
 - [Sources and prior work](docs/SOURCES.md)
 
-The Fide website article is not yet published; this repository's draft is the reading copy. No guessed public article URL or release DOI is provided.
+The [Fide Insights article](https://fideai.org/insights/agentdojo-when-fixing-the-score-changes-the-test/) is the intended website reading surface. That route becomes available when the coordinated website PR is merged and deployed. The complete essay and technical paper are also available above.
 
 ## What the evidence supports
 

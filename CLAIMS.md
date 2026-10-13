@@ -19,3 +19,5 @@ Private · October 1, 2026 · Sources and generated records are evidence; review
 Sources: [outcome audit](archive/README.md), [trace-observability extension](archive/README.md). The [review summary](docs/REVIEW.md) describes AI review scope and remaining limitations. Human review and publication approval remain separate.
 
 Direct prior work for evidence labels, bounds and outcome-dependent exclusion is Gao and Zhou, [2605.10448v1](https://arxiv.org/abs/2605.10448v1). The [source and attribution guide](docs/SOURCES.md) distinguishes these established methods from the specific Fide measurements and compatibility finding.
+
+Editorial clarification — October 13: AD-11 counts selected implementation identities, not 32 observed behavior changes. The recipient test compares two native methods with prerequisite helpers held true. The repair criterion preserves versions below v1.1.2; it is Fide’s stated criterion, not a verified maintainer promise. All 892 cells per arm satisfy highest-compatible-registered-version selection. No claim identifies the evaluator used for historical results.
