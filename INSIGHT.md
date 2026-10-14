@@ -3,7 +3,7 @@
 ## Fide traces an unused scoring correction, a changed rule in older versions, and the evidence our own audit left out.
 
 Fide AI · Research analysis · Revised October 13, 2026  
-[Research paper and methods](RESEARCH-PAPER.md). [Review scope and limitations](docs/REVIEW.md).
+[Research paper and methods](RESEARCH-PAPER.md).
 
 AgentDojo gives AI assistants everyday jobs, such as working with files and email, then tests whether an attacker can divert them. Its scoring rules decide whether the assistant completed the job and whether the attack succeeded. We audited those rules and the released records behind the scores.
 
@@ -61,7 +61,7 @@ We also found a problem in our own analysis. To compare defenses, we had to deci
 
 We selected 200 records covering the same forty user tasks under five configurations: an undefended baseline and four defenses. All used the same GPT-4o model version, attacker objective and attack family. We chose this sample after the initial findings, so it is an exploratory comparison, not a general test of these defenses.
 
-We required readable email records in the tool responses so we could reconstruct what happened. Eleven records from one defense, a prompt-injection detector, did not meet that requirement. In all eleven, an email-send response contained the detector’s redaction notice: “Data omitted because a prompt injection was detected”. The same notice appears in the [detector code we inspected](docs/REVIEW-CLARIFICATIONS.md).
+We required readable email records in the tool responses so we could reconstruct what happened. Eleven records from one defense, a prompt-injection detector, did not meet that requirement. In all eleven, an email-send response contained the detector’s redaction notice: “Data omitted because a prompt injection was detected”. The same notice appears in the [detector code we inspected](https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/agent_pipeline/pi_detector.py).
 
 That connects the missing evidence to the defense being evaluated. To keep the tasks the same across configurations, we removed those eleven task IDs from all five. That left twenty-nine tasks in each.
 
@@ -97,6 +97,4 @@ Before calling one AI defender better than another, we need to check the scoring
 
 ---
 
-**Inspect the work:** The [research paper](RESEARCH-PAPER.md) contains the full methods, source pin, populations and uncertainty analysis. The [registration and compatibility supplement](compatibility/README.md) provides its protocol, projected results and controls, with a [summary of failed attempts](docs/FAILURES-AND-AMENDMENTS.md). The separate [archive-analysis companion](archive/README.md) explains how to verify derived counts or recompute the original analysis. The [claim ledger](CLAIMS.md) records the evidence and boundaries for each main result. Start with the [evidence guide](docs/EVIDENCE-GUIDE.md) to follow a finding to its data and reproduction steps.
-
-**Review status:** Separate Codex AI agents reviewed and reproduced parts of the work within a shared orchestrated session; this is not independent human review. Independent human technical review remains pending. No new model trials or real-world email delivery are claimed.
+**Explore the research:** Read the [technical paper](RESEARCH-PAPER.md), follow the findings through the [evidence guide](docs/EVIDENCE-GUIDE.md), or reproduce the analysis with the [companion repository](https://github.com/FideAI/fide-agentdojo-audit).
