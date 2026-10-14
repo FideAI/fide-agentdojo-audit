@@ -16,3 +16,9 @@ Prepared October 13, 2026 at the owner’s request. PR preparation is authorized
 The root README, essay and paper use release-facing language. Frozen archive/protocol documents preserve their historical private-status notes. Raw traces, third-party full texts, internal reviewer deliberations and private cyber workspace content remain excluded. The MIT license and upstream attribution are unchanged.
 
 The website PR is the final publication step. Do not deploy it while this repository is private: its evidence links would require access. Nothing in this checklist authorizes publishing other held cyber drafts.
+
+## Reader-review response and editorial signoff
+
+The supplied AI review identified a direct-predicate/native-dispatch conflation in the opening; that wording is corrected. The article now describes the small recipient-case control immediately and explains both baseline registration and detector redaction. The working paper and minimized reproducible recheck record the version metadata and all eleven excluded detector records. Fide’s owner confirmed no connection to upstream PR #193 or C01in-0. No outreach was sent.
+
+The website editorial standard requires a human rewrite of the opening, interpretation, transitions and ending, plus final editorial responsibility. **Human rewrite/signoff is not recorded.** Assistant revisions and this AI review do not satisfy that requirement. Before landing, the owner should complete and record that editorial step (or explicitly change the applicable policy); check the actual publication date and public companion access as already listed. The publication-enabled source remains unchanged in status, as requested for deployment on merge.

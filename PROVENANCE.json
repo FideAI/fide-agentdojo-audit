@@ -17,11 +17,11 @@
   "navigation_evidence": "evidence/PROVENANCE.json records input hashes for four additional minimized projections of the existing qualified archive results; the sealed archive is unchanged.",
   "editorial_revision": {
     "date": "2026-10-13",
-    "scope": "Contribution, related-work, evidence review and plain-language article revision; experimental inputs and results unchanged.",
+    "scope": "Contribution, related-work, evidence review and plain-language article revision; experimental inputs and results unchanged. Supplied-reader review corrected direct-scoring versus dispatch language and added a reproducible version/redaction metadata check; existing experimental results unchanged.",
     "current_private_source_documents": {
-      "MANUSCRIPT.md": "a115443a5ede760734e2841a4cee90a0f3158d49b93ad9e7f0d12c63499d57bf",
-      "RESEARCH-PAPER.md": "b1ab701264a457161c1da511266ae14beb98874291195db0107117ed91effdab",
-      "CLAIMS.md": "b07267fc3b248304e349ccf6a476f724da1fd8fba9da8fabb273b525d36ab8d8"
+      "MANUSCRIPT.md": "742ef2fb5efb84d4be1f2e3d3cc760c811b6c9eea8157c7f52ad3e5aa36c4969",
+      "RESEARCH-PAPER.md": "f85e7bf13c15855fd705fae2e89c48b3406e1782bc0b7caa1ea37d6d3edab291",
+      "CLAIMS.md": "afc028c9605bb37ef55e2eaa2ed446c30c6e3ce36486ee0d1969b81f1e307ce0"
     }
   },
   "release_preparation": {
