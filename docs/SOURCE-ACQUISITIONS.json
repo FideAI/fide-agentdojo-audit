@@ -98,6 +98,62 @@
       "status": 200,
       "final_url": "https://arxiv.org/abs/2605.10448v1",
       "sha256": "7fe2d57b42ae8dc5d43a23f796361c267618c369816fbb93f418d80b032d6481"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.03448v1",
+      "access_utc": "2026-10-13T22:50:36.900227+00:00",
+      "status": 200,
+      "final_url": "https://arxiv.org/html/2610.03448v1",
+      "sha256": "141bc8df1466dd2a8db17fa93a9678c229ffe29ff1f2c394d7c38550abdfdc62"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.09793v1",
+      "access_utc": "2026-10-13T22:50:37.106392+00:00",
+      "status": 200,
+      "final_url": "https://arxiv.org/html/2610.09793v1",
+      "sha256": "564d254d6e1a6345657033f076d7608af942589b3fd1e3e963f46bf61fec64e4"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.37315v1",
+      "access_utc": "2026-10-13T22:50:37.279355+00:00",
+      "status": 200,
+      "final_url": "https://arxiv.org/html/2609.37315v1",
+      "sha256": "a2a8cc15a1d2813a8992361799a6b0a3c677ec852229408a037b61613ab5607c"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.10448v1",
+      "access_utc": "2026-10-13T22:50:37.451915+00:00",
+      "status": 200,
+      "final_url": "https://arxiv.org/html/2605.10448v1",
+      "sha256": "5fe293fb85ac1e4f4b211516c6a8ac5df81e2c79e7577698537bfa5b84faf1f1"
+    },
+    {
+      "url": "https://api.github.com/repos/ethz-spylab/agentdojo/commits/main",
+      "access_utc": "2026-10-13T22:50:37.844848+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ethz-spylab/agentdojo/commits/main",
+      "sha256": "340db743cd61cd2d0771550d3ac0a43a84db5d2f54591e95edf1141373cb43a1"
+    },
+    {
+      "url": "https://api.github.com/repos/ethz-spylab/agentdojo/pulls/193",
+      "access_utc": "2026-10-13T22:50:39.693667+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ethz-spylab/agentdojo/pulls/193",
+      "sha256": "a5e0bffd3a3dc29d4d8fec69995b7730e0e94bb5cc58d1ae3b54f96b1165f471"
+    },
+    {
+      "url": "https://api.github.com/repos/ethz-spylab/agentdojo/issues/193/comments",
+      "access_utc": "2026-10-13T22:50:40.052358+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ethz-spylab/agentdojo/issues/193/comments",
+      "sha256": "828cca9e7edf3d4381e3147071741a1b7eecaee8ed4ed3b6cae188c83e498def"
+    },
+    {
+      "url": "https://api.github.com/repos/ethz-spylab/agentdojo/pulls/191",
+      "access_utc": "2026-10-13T22:50:40.993966+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ethz-spylab/agentdojo/pulls/191",
+      "sha256": "842fc818114a1810029e1b27748d118ba8bcfcf4e59ad3da79fcb4ae17f397be"
     }
   ]
 }

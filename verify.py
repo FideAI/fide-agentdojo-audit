@@ -60,6 +60,23 @@ def main():
  assert {x['case'] for x in changed}=={'contradictory_'+x for x in ('sender','recipient','subject','body','status')}
  assert all(x['before']['contract']=='success' and x['after']['contract']=='unknown' for x in changed)
  assert logging['network_attempts']==amendment['network_attempts']==0
+ # Review clarifications preserve the original selected populations.
+ review=read(e/'review-mechanisms.json')
+ cases={x['path'] for x in read(R/'archive/data/adjudication-count-inputs.json') if x['current_native_success'] is False and x['shipped_fix_success'] is True}
+ versions=review['case_versions'];assert len(versions)==45 and {x['path'] for x in versions}==cases
+ assert all(cohort[x['path']]==x['sha256'] for x in versions)
+ assert sum(x['benchmark_version'] is None for x in versions)==42
+ assert sum(x['benchmark_version']=='v1.2.1' for x in versions)==3
+ assert review['version_counts']=={'absent_or_null':42,'v1.2.1':3}
+ excluded={x['path']:x for x in read(R/'archive/data/comparison-count-inputs.json') if x['excluded'] and x['pipeline']=='gpt-4o-2024-05-13-transformers_pi_detector'}
+ rows=review['excluded_detector_records'];assert len(rows)==11 and {x['path'] for x in rows}==set(excluded)
+ assert all(x['sha256']==cohort[x['path']] and x['publisher_security']==excluded[x['path']]['publisher_security'] for x in rows)
+ assert all(x['redacted_send_response_message_indices'] for x in rows)
+ assert sum(x['publisher_security'] for x in rows)==review['excluded_detector_saved_successes']==8
+ assert review['excluded_detector_count']==review['excluded_detector_with_redacted_send']==11
+ assert review['source_pin']==read(R/'PROVENANCE.json')['upstream_commit']
+ assert len(review['v1_1_2_declarations'])==8
+ assert [x['class'] for x in review['v1_1_2_declarations'] if x['registration']=='task_suite.register_user_task']==['UserTask13']
  # Check every local Markdown destination; old archive provenance prose is historical.
  links=0
  for name in manifest:
