@@ -2,6 +2,8 @@
 
 Prepared October 13, 2026 at the owner’s request. PR preparation is authorized; merge, repository visibility change and deployment have not yet occurred. Publication readiness and independent review are separate: no completed independent human review or peer review is claimed.
 
+Release status, verified November 14, 2026: the landing order below was completed on October 13. This repository's release PR merged, the repository is public, and the [Insights article](https://fideai.org/insights/agentdojo-when-fixing-the-score-changes-the-test/) is live. The owner has confirmed the website's human editorial signoff. Independent human technical review and peer review are still not claimed. The rest of this checklist records the October 13 preparation.
+
 ## Landing order
 
 1. Review and merge this companion PR so GitHub main contains the revised essay, technical paper, claims, references and release manifest.
